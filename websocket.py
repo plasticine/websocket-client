@@ -21,7 +21,7 @@ Copyright (C) 2010 Hiroki Ohtani(liris)
 
 
 import socket
-from urlparse import urlparse
+from urlparse
 import random
 import struct
 import md5
@@ -73,7 +73,7 @@ def _parse_url(url):
     urlparse.uses_fragment.append("ws")
     urlparse.uses_netloc.append("wss")
     urlparse.uses_fragment.append("wss")
-    parsed = urlparse(url)
+    parsed = urlparse.urlparse(url)
     if parsed.hostname:
         hostname = parsed.hostname
     else:
