@@ -69,6 +69,10 @@ def _parse_url(url):
     parse url and the result is tuple of 
     (hostname, port, resource path and the flag of secure mode)
     """
+    urlparse.uses_netloc.append("ws")
+    urlparse.uses_fragment.append("ws")
+    urlparse.uses_netloc.append("wss")
+    urlparse.uses_fragment.append("wss")
     parsed = urlparse(url)
     if parsed.hostname:
         hostname = parsed.hostname
